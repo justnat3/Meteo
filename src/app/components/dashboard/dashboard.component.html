@@ -1,8 +1,16 @@
-
-<div class="box" *ngIf="res">
-    <h4>{{res.temp}}&deg;F</h4>
-    <h4>Lat: {{res.coord.lat}} || Lon: {{res.coord.lon}}</h4>
-    <!-- <h4>{{res.windspeed.speed}} || {{res.windspeed.deg}}</h4> -->
-    <h4> Humidity: {{res.humidity}}</h4>
-    <h4>{{res.alert}}</h4>
-</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <div *ngIf="res">
+            <h4>{{res.temp}}&deg;F</h4>
+            <h4>Lat: {{res.coord.lat}} || Lon: {{res.coord.lon}}</h4>
+            <!-- <h4>{{res.windspeed.speed}} || {{res.windspeed.deg}}</h4> -->
+            <h4> Humidity: {{res.humidity}}</h4>
+            <h4>{{res.alert}}</h4>
+        </div>
+    </body>
+</html>

@@ -11,12 +11,12 @@ export class WeatherAPIService {
   key: string = '9ab7a8e9725f93fe5b641a6a4c794d14';
   zipcode: number;
   country_code: string;
-  obj: any;
+  
 
   constructor(private http: HttpClient) { }
 
   public getWeather(): Observable<Weather> {
-    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=10033,us&appid=${this.key}`)
+    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=10033,us&appid=9ab7a8e9725f93fe5b641a6a4c794d14`)
       .pipe(map((s: Object) => {
         const result: any = JSON.parse(JSON.stringify(s));
         return {
