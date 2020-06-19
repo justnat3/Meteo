@@ -1,16 +1,16 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-    <body>
-        <div *ngIf="res">
-            <h4>{{res.temp}}&deg;F</h4>
-            <h4>Lat: {{res.coord.lat}} || Lon: {{res.coord.lon}}</h4>
-            <!-- <h4>{{res.windspeed.speed}} || {{res.windspeed.deg}}</h4> -->
-            <h4> Humidity: {{res.humidity}}</h4>
-            <h4>{{res.alert}}</h4>
-        </div>
-    </body>
-</html>
+<div class='box' *ngIf="res">
+
+    <!-- <img src="/assets/sun.svg" class="svg" alt="www" height="100" width="100"> -->
+    <div class='svg'>
+        <img src="/assets/cloud.svg" alt="www" height="100" width="100">
+    </div>
+    <h4>Temp: {{res.temp}}&deg;F</h4>
+    <h4>Wind: {{res.windspeed}}<small>mph</small></h4>
+    <h4> Humidity: {{res.humidity}}</h4>
+    <!-- <h4>{{res.alert}}</h4> -->
+    <h4>{{res.townName}}</h4>
+</div>
+
+<div>
+    <app-zip-form></app-zip-form>
+</div>

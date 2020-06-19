@@ -1,17 +1,24 @@
 export interface Weather {
     temp: number;
-    coord: Coord;
-    windspeed: Wind;
+    description: string;
+    windspeed: number;
     humidity: number;
-    alert: string
+    alert: string;
+    townName: string,
 }
 
-interface Wind {
-    speed: number;
-    deg: number;
+export interface Zipcode {
+    zipcode: number
 }
 
-interface Coord {
-    lat: number;
-    lon: number;
-}
+
+
+// interface Wind {
+//     speed: number;
+//     deg: number;
+// }
+
+// interface Coord {
+//     lat: number;
+//     lon: number;
+// }
