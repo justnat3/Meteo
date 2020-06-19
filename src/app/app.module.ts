@@ -7,10 +7,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MapComponent } from './components/map/map.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ZipFormComponent } from './components/zip-form/zip-form.component'
+import { ZipFormComponent } from './components/zip-form/zip-form.component';
 import { MatInputModule } from '@angular/material/input';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms'
-
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,10 +28,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms'
     BrowserAnimationsModule,
     MatInputModule,
     ReactiveFormsModule,
-
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

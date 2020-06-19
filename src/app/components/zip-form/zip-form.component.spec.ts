@@ -8,9 +8,8 @@ describe('ZipFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ZipFormComponent ]
-    })
-    .compileComponents();
+      declarations: [ZipFormComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
