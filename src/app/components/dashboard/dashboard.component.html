@@ -1,16 +1,16 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
 <div class='box' *ngIf="res">
-
-    <!-- <img src="/assets/sun.svg" class="svg" alt="www" height="100" width="100"> -->
-    <div class='svg'>
-        <img src="/assets/cloud.svg" alt="www" height="100" width="100">
+    <div class="card">
+        <div class="weather-state">
+            <img src="/assets/bitcloude.svg" alt="404" height="140" width="140">
+        </div>
+        <h1><span>Temp:</span> {{res.temp}}&deg;F</h1>
+        <h1><span>Wind:</span> {{res.windspeed}}<small>mph</small></h1>
+        <h1><span>Humidity:</span> {{res.humidity}}&#37;</h1>
+        <h1>{{res.townName}}</h1>
+        <app-zip-form></app-zip-form>
+        <div class='zipcode'>
+            <img src="/assets/arrow.svg" alt="404" height="20" width="20">
+        </div>
     </div>
-    <h4>Temp: {{res.temp}}&deg;F</h4>
-    <h4>Wind: {{res.windspeed}}<small>mph</small></h4>
-    <h4> Humidity: {{res.humidity}}</h4>
-    <!-- <h4>{{res.alert}}</h4> -->
-    <h4>{{res.townName}}</h4>
-</div>
-
-<div>
-    <app-zip-form></app-zip-form>
 </div>

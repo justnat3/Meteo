@@ -20,7 +20,8 @@ export class DashboardComponent implements OnInit {
   public WeatherInfo() {
     this.WeatherAPI.getWeather().subscribe(weather => {
       this.res = weather;
-      console.log(weather)
+      console.log(this.res.description)
+
     });
   }
 }
