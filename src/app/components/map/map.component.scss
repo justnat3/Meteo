@@ -1,0 +1,27 @@
+#map {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.contain {
+  background-color: #101d2e;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  grid-area: map;
+  min-height: 100vh;
+}
+// desktop
+@media screen and (min-width: 1200px) {
+  #map {
+    border-radius: 20px;
+    min-height: unset;
+  }
+  .contain {
+    box-shadow: 3px 12px 18px 4px rgba(15, 10, 13, 1);
+    // padding: 2%;
+    border-radius: 20px;
+    min-height: unset;
+  }
+}

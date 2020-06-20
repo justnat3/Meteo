@@ -1,23 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-
+import { environment } from '../../../environments/environment';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import * as mapboxgl from 'mapbox-gl';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
 })
 export class MapComponent implements OnInit {
-  constructor() {}
+  map: mapboxgl.Map;
+  style = 'mapbox://styles/justnat3/ckbo77m9b2kai1jp91a37p0wm';
+  lat = 37.75;
+  lng = -122.41;
 
-  ngOnInit(): void {}
-
-  // public MapboxInterface() {
-  //   let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
-
-  //   mapboxgl.accessToken =
-  //     'pk.eyJ1IjoianVzdG5hdDMiLCJhIjoiY2tibHRrcXVsMWNydzJvcW5uMmx5cjM3NiJ9.kb1t-Pnwm4g_JDwgQrKIZA';
-  //   let map = new mapboxgl.Map({
-  //     container: 'YOUR_CONTAINER_ELEMENT_ID',
-  //     style: 'mapbox://styles/mapbox/streets-v11',
-  //   });
-  // }
+  ngOnInit() {
+    mapboxgl.accessToken = environment.mapbox.accessToken;
+    this.map = new mapboxgl.Map({
+      container: 'map',
+      style: this.style,
+      zoom: 13,
+      center: [this.lng, this.lat],
+    });
+    // // Add map controls
+    // this.map.addControl(new mapboxgl.NavigationControl());
+  }
 }

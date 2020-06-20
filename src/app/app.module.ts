@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ZipFormComponent } from './components/zip-form/zip-form.component';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MapdashComponent } from './components/mapdash/mapdash.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DashboardComponent,
     MapComponent,
     ZipFormComponent,
+    MapdashComponent,
   ],
 
   imports: [

@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  grid-template-areas:
+    "map"
+    "dashboard";
+  background-color: #cc7941;
+}
+
+@media screen and (min-width: 1200px) {
+  .grid {
+    grid-gap: 3%;
+    padding: 3%;
+    grid-template-areas: "map dashboard";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}

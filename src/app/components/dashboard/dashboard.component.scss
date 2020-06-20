@@ -1,33 +1,16 @@
-.box {
-  height: 100vh;
-  width: 100vw;
-  // padding-top: 50%;
-  background-color: #091524;
-  color: white;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .card {
   background-color: #101d2e;
-  margin: auto;
-  width: 50%;
-  // height: 50%;
-  border-radius: 20px;
+  width: 100%;
+  height: 100%;
   padding: 50px 40px;
+  justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
-  -webkit-box-shadow: 3px 12px 18px 4px rgba(15, 10, 13, 1);
-  -moz-box-shadow: 3px 12px 18px 4px rgba(15, 10, 13, 1);
-  box-shadow: 3px 12px 18px 4px rgba(15, 10, 13, 1);
+  box-sizing: border-box;
+  grid-area: dashboard;
+  min-height: 100vh;
 }
-
-// .nav {
-//     background: #36454f;
-// }
 
 .zipcode {
   display: flex;
@@ -39,22 +22,21 @@
   padding-bottom: 5px;
 }
 
-h1 {
-  font-family: "Bebas Neue", serif;
-  font-size: 35px;
-  line-height: 35px;
-  color: #ceb546;
-}
-
-@media screen and (min-width: 700px) {
-  h1 {
-    font-family: "Bebas Neue", serif;
-    font-size: 43px;
-    line-height: 50px;
-    color: #ceb546;
-  }
-}
+// .text {
+//   font-family: "Bebas Neue", serif;
+//   font-size: 100vw;
+//   line-height: 1rem;
+//   color: #ceb546;
+// }
 
 span {
   color: rgb(228, 161, 161);
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    min-height: unset;
+    border-radius: 20px;
+    box-shadow: 3px 12px 18px 4px rgba(15, 10, 13, 1);
+  }
 }
