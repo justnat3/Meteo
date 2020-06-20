@@ -9,16 +9,13 @@ import { Weather } from 'src/types';
 })
 export class WeatherAPIService {
   key: string = '9ab7a8e9725f93fe5b641a6a4c794d14';
-  zipcode: string;
-  country_code: string;
-  // zipLength: number = this.zipcode.length;
 
   constructor(private http: HttpClient) {}
 
-  public getWeather(): Observable<Weather> {
+  public getWeather(zipcode: number): Observable<Weather> {
     return this.http
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=74037,us&units=imperial&appid=9ab7a8e9725f93fe5b641a6a4c794d14`
+        `https://api.openweathermap.org/data/2.5/weather?q=${zipcode},us&units=imperial&appid=${this.key}`
       )
       .pipe(
         map((s: Object) => {

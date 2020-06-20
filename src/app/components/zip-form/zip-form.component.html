@@ -1,6 +1,15 @@
-<form class="box">
+<!-- added ngSubmit to call submit method in zip-from Component -->
+<form class="box" (ngSubmit)="submit()">
   <mat-form-field>
-    <input matInput placeholder="Zip Code" [formControl]="zip" required />
+    <!-- Calling ngModel to update zipcode property Name=Property being changed in DOM -->
+    <input
+      [(ngModel)]="zipcode"
+      name="zipcode"
+      matInput
+      placeholder="Zip Code"
+      required
+    />
     <mat-error *ngIf="zip.invalid">{{ getErrorMessage() }}</mat-error>
   </mat-form-field>
+  <!-- <button type="submit">Submit</button> -->
 </form>

@@ -11,7 +11,8 @@
     <h1><span>Wind:</span> {{ res.windspeed }}<small>mph</small></h1>
     <h1><span>Humidity:</span> {{ res.humidity }}&#37;</h1>
     <h1>{{ res.townName }}</h1>
-    <app-zip-form></app-zip-form>
+    <!-- added zipcodeUpdated to push the event update to the dashboard conponent.ts $event == zipcode -->
+    <app-zip-form (zipcodeUpdated)="updateZipcode($event)"></app-zip-form>
     <div class="zipcode">
       <img src="/assets/arrow.svg" alt="404" height="20" width="20" />
     </div>

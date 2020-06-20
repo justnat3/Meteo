@@ -14,12 +14,19 @@ export class DashboardComponent implements OnInit {
 
   res: Weather;
   ngOnInit(): void {
-    this.WeatherInfo();
+    this.weatherInfo();
   }
-  public WeatherInfo() {
-    this.WeatherAPI.getWeather().subscribe((weather) => {
+  // Update weatherInfo with zipcode default
+  weatherInfo(zipcode = 10032) {
+    // added zipcode input to getweather method
+    this.WeatherAPI.getWeather(zipcode).subscribe((weather) => {
       this.res = weather;
-      console.log(this.res.description);
+      // console.log(this.res.description);
     });
+  }
+  // called from Parent to make another call to the service for updated information.
+  updateZipcode(zipcode: number) {
+    // console.log('updating');
+    this.weatherInfo(zipcode);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -6,10 +6,16 @@ import { FormControl, Validators } from '@angular/forms';
   templateUrl: './zip-form.component.html',
   styleUrls: ['./zip-form.component.scss'],
 })
-export class ZipFormComponent implements OnInit {
-  constructor() {}
+export class ZipFormComponent {
+  // @output create event emitter for zipcode that is of type int an call it updatedzipcode. This is used for the emit method.
+  @Output() zipcodeUpdated = new EventEmitter<number>();
+  zipcode: number;
 
-  ngOnInit(): void {}
+  // Submit method called in ComponentHTML to emit the change in zipcode above ngModel
+  submit() {
+    // zipcodeUpdated referenced in parent component
+    this.zipcodeUpdated.emit(this.zipcode);
+  }
 
   zip = new FormControl('', Validators.required);
   getErrorMessage() {

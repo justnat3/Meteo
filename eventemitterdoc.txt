@@ -1,0 +1,27 @@
+- EventEmitters
+
+Child Component
+	<HTML>
+	wrapped in a (ngSubmit) => to a function in a form header. Form parent.
+	ngModel tells the "Property" to change in the input tag.
+	requires a name in the input tag
+
+	<TS>
+	Requires @output dectorator asigned to a new method bound to the parent component adding a
+	new Eventemitter<TYPE>
+	then the property to change
+
+Parent Component
+
+	<HTML>
+	in the child component templateTag requires Method called to update the parent component $event
+
+	<TS>
+	Set default value inside service call method
+	call method inside component to update the service call.
+
+ServiceSide
+
+	<TS>
+	add input to the service call.
+
