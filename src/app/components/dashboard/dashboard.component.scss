@@ -22,12 +22,16 @@
   padding-bottom: 5px;
 }
 
-// .text {
-//   font-family: "Bebas Neue", serif;
-//   font-size: 100vw;
-//   line-height: 1rem;
-//   color: #ceb546;
-// }
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bebas Neue", serif;
+  font-size: 12vw;
+  line-height: 15vw;
+  color: #ceb546;
+}
 
 span {
   color: rgb(228, 161, 161);
@@ -38,5 +42,11 @@ span {
     min-height: unset;
     border-radius: 20px;
     box-shadow: 3px 12px 18px 4px rgba(15, 10, 13, 1);
+  }
+  .text {
+    font-family: "Bebas Neue", serif;
+    font-size: 2vw;
+    line-height: 3vw;
+    color: #ceb546;
   }
 }

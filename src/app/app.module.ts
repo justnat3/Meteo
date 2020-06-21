@@ -11,7 +11,9 @@ import { ZipFormComponent } from './components/zip-form/zip-form.component';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MapdashComponent } from './components/mapdash/mapdash.component';
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,6 +32,9 @@ import { MapdashComponent } from './components/mapdash/mapdash.component';
     BrowserAnimationsModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
   ],
 
   providers: [],
