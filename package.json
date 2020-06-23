@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~9.1.11",
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
+    "@mapbox/mapbox-gl-geocoder": "^4.5.1",
     "mapbox-gl": "^1.11.0",
     "mapbox-gl-geocoder": "^2.0.1",
     "rxjs": "~6.5.4",

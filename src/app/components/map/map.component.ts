@@ -1,7 +1,7 @@
 import { environment } from '../../../environments/environment';
 import { Component, OnInit } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
-import * as MapboxGeocoder from 'mapbox-gl-geocoder';
+import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
@@ -17,7 +17,6 @@ export class MapComponent implements OnInit {
   source: any;
   markers: any;
   ngOnInit() {
-    
     mapboxgl.accessToken = environment.mapbox.accessToken;
     this.map = new mapboxgl.Map({
       container: 'map',
@@ -26,29 +25,27 @@ export class MapComponent implements OnInit {
       center: [this.lng, this.lat],
     });
     // this.markers = this.map.GetMarkers()
-    
-    this.initializeMap()
-    console.log(this.initializeMap())  
-    this.addressBook()
-  }  
-public initializeMap() {
-  if (this.map.navigator.geolocation) {
-    this.map.navigator.geolocation.getCurrentPosition(position => {
-      this.lat = position.coords.latitude
-      this.lng = position.coords.longitude
-      this.map.flyTo({
-        center: [this.lng, this.lat]
-      })
-    })
-  }
-}
-private addressBook(){
-  this.map.addControl(
-    new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken,
-    mapboxgl: mapboxgl
-    })
-    );
-}
 
+    // this.initializeMap();
+    // console.log(this.initializeMap());
+    const mapControl = this.map.addControl(
+      new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+      })
+    );
+    console.log(mapControl);
   }
+  // initializeMap() {
+  //   if (this.map.navigator.geolocation) {
+  //     this.map.navigator.geolocation.getCurrentPosition((position) => {
+  //       this.lat = position.coords.latitude;
+  //       this.lng = position.coords.longitude;
+  //       this.map.flyTo({
+  //         center: [this.lng, this.lat],
+  //       });
+  //     });
+  //   }
+  // }
+  // addressBook() {}
+}

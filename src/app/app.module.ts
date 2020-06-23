@@ -14,6 +14,12 @@ import { MapdashComponent } from './components/mapdash/mapdash.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { DegreesComponent } from './components/degrees/degrees.component';
+import { WindspeedComponent } from './components/windspeed/windspeed.component';
+import { HumidityComponent } from './components/humidity/humidity.component';
+import { TownnameComponent } from './components/townname/townname.component';
+import { WheatherpictureComponent } from './components/wheatherpicture/wheatherpicture.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +28,11 @@ import { MatIconModule } from '@angular/material/icon';
     MapComponent,
     ZipFormComponent,
     MapdashComponent,
+    DegreesComponent,
+    WindspeedComponent,
+    HumidityComponent,
+    TownnameComponent,
+    WheatherpictureComponent,
   ],
 
   imports: [

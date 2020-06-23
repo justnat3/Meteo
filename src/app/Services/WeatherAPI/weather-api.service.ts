@@ -3,14 +3,15 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Weather } from 'src/types';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WeatherAPIService {
-  key: string = '9ab7a8e9725f93fe5b641a6a4c794d14';
-
   constructor(private http: HttpClient) {}
+
+  key = environment.APIKey.WeatherKey;
 
   public getWeather(zipcode: number): Observable<Weather> {
     return this.http
