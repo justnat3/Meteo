@@ -1,27 +1,53 @@
 .grid {
   display: grid;
-  grid-template-rows: 1fr 1fr;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+  grid-template-rows: repeat(6, 50vh);
   grid-template-areas:
-    "degrees windspeed map"
-    "wheatherpicture humidity map"
-    "townname townname townname";
-  // grid-template-areas: "map";
+    "weatherpicture"
+    "degrees"
+    "windspeed"
+    "humidity"
+    "townname"
+    "map";
 }
 
-body {
-  background-color: grey;
-  height: 100vh;
-  width: 100vw;
+@media screen and (min-width: 1200px) {
+  .grid {
+    padding: 50px;
+    grid-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "degrees windspeed map"
+      "weatherpicture humidity map"
+      "townname townname map";
+  }
 }
-// @media screen and (min-width: 1200px) {
-//   .grid {
-//     grid-gap: 3%;
-//     padding: 3%;
-//     grid-template-areas: "map dashboard";
-//     grid-template-rows: 1fr;
-//     grid-template-columns: 1fr 1fr;
-//   }
-// }
+
+app {
+  &-degrees {
+    grid-area: degrees;
+  }
+
+  &-windspeed {
+    grid-area: windspeed;
+  }
+
+  &-weatherpicture {
+    grid-area: weatherpicture;
+  }
+
+  &-humidity {
+    grid-area: humidity;
+  }
+
+  &-townname {
+    grid-area: townname;
+  }
+
+  &-map {
+    grid-area: map;
+  }
+}
