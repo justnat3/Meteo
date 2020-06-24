@@ -1,11 +1,3 @@
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Bebas+Neue"
-/>
-
-<div class="card" *ngIf="res">
-  <div class="text">
-    <div><span>Temp:</span> {{ res.temp }}&deg;F</div>
-  </div>
-  <!-- added zipcodeUpdated to push the event update to the dashboard conponent.ts $event == zipcode -->
+<div class="widget">
+  <p><span>Temp:</span> {{ res.temp }}<small>&deg;F</small></p>
 </div>
