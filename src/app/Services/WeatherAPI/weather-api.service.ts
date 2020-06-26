@@ -4,19 +4,21 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Weather } from 'src/types';
 import { environment } from 'src/environments/environment';
-
+import { GeoCodeService } from 'src/app/Services/MapAPI/geo-code.service';
 @Injectable({
   providedIn: 'root',
 })
 export class WeatherAPIService {
-  constructor(private http: HttpClient) {}
-
+  constructor(private http: HttpClient, private MapAPI: GeoCodeService) {}
+  lat: number = 30.5118;
+  lng: number = -0.12574;
   key = environment.APIKey.WeatherKey;
 
-  public getWeather(zipcode: number): Observable<Weather> {
+  async getWeather(): Promise<Observable<Weather>> {
+    const { lat, lng } = await this.MapAPI.getCoords();
     return this.http
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${zipcode},us&units=imperial&appid=${this.key}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${this.key}`
       )
       .pipe(
         map((s: Object) => {

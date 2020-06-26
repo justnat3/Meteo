@@ -1,8 +1,8 @@
 <div class="grid">
-  <app-degrees></app-degrees>
-  <app-windspeed></app-windspeed>
+  <app-degrees [temp]="res.temp"></app-degrees>
+  <app-windspeed [windspeed]="res.windspeed"></app-windspeed>
   <app-wheatherpicture></app-wheatherpicture>
-  <app-humidity></app-humidity>
-  <app-townname></app-townname>
+  <app-humidity [humidity]="res.humidity"></app-humidity>
+  <app-townname [townName]="res.townName"></app-townname>
   <app-map></app-map>
 </div>
