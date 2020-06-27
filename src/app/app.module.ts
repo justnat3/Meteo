@@ -19,6 +19,7 @@ import { WindspeedComponent } from './components/windspeed/windspeed.component';
 import { HumidityComponent } from './components/humidity/humidity.component';
 import { TownnameComponent } from './components/townname/townname.component';
 import { WheatherpictureComponent } from './components/wheatherpicture/wheatherpicture.component';
+import { LandhereComponent } from './landhere/landhere.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { WheatherpictureComponent } from './components/wheatherpicture/wheatherp
     HumidityComponent,
     TownnameComponent,
     WheatherpictureComponent,
+    LandhereComponent,
   ],
 
   imports: [

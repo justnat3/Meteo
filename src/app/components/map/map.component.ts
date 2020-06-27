@@ -20,4 +20,7 @@ export class MapComponent implements OnInit {
   SeeUser() {
     this.MapAPI.seeUser();
   }
+  Navigation() {
+    this.MapAPI.justmapit();
+  }
 }

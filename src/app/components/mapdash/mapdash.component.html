@@ -1,3 +1,15 @@
+<div>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <img src="src/assets/sun.svg" height="24" width="24" />
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="map">Full Map</button>
+    <button mat-menu-item routerLink="mapdash">Dashboard</button>
+  </mat-menu>
+  <router-outlet></router-outlet>
+</div>
+
 <div class="grid">
   <app-degrees [temp]="res.temp"></app-degrees>
   <app-windspeed [windspeed]="res.windspeed"></app-windspeed>

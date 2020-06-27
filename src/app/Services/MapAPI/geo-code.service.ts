@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import { environment } from '../../../environments/environment';
-// import { resolve } from 'dns';
 @Injectable({
   providedIn: 'root',
 })
@@ -10,9 +9,9 @@ export class GeoCodeService {
   constructor() {}
 
   map: mapboxgl.Map;
-  // style = 'mapbox://styles/justnat3/ckbo77m9b2kai1jp91a37p0wm';
+  style = 'mapbox://styles/justnat3/ckbo77m9b2kai1jp91a37p0wm';
   // style = 'mapbox://styles/mapbox/satellite-streets-v11';
-  style = 'mapbox://styles/justnat3/ckbvih3g806ic1ipc1s56o8ml';
+  // style = 'mapbox://styles/justnat3/ckbvih3g806ic1ipc1s56o8ml';
   lat = 37.75;
   lng = -122.41;
 
@@ -20,21 +19,20 @@ export class GeoCodeService {
   markers: any;
 
   justmapit() {
-    const mapControl = this.map.addControl(
+    this.map.addControl(
       new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
         mapboxgl: mapboxgl,
       })
     );
-    console.log(mapControl);
   }
   mapmap() {
     mapboxgl.accessToken = environment.mapbox.accessToken;
     this.map = new mapboxgl.Map({
       container: 'map',
       style: this.style,
-      zoom: 13,
-      // center: [this.lng, this.lat],
+      zoom: 12,
+      center: [this.lng, this.lat],
     });
   }
   seeUser() {
