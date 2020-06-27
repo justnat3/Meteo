@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/58314490/85216808-d4f70180-b34e-11ea-82eb-7b840f8a889b.png)
+![image](https://user-images.githubusercontent.com/58314490/85928650-37cb2a00-b874-11ea-9248-0a3b81bd0127.png)
 
 # Meteo
 
