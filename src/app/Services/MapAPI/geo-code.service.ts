@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import { environment } from '../../../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -26,7 +27,7 @@ export class GeoCodeService {
       })
     );
   }
-  mapmap() {
+  Map() {
     mapboxgl.accessToken = environment.mapbox.accessToken;
     this.map = new mapboxgl.Map({
       container: 'map',

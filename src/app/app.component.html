@@ -1,1 +1,9 @@
+<button mat-button [matMenuTriggerFor]="menu">
+  <img src="assets/sun.svg" height="24" width="24" translate="yes" />
+</button>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="map">Full Map</button>
+  <button mat-menu-item routerLink="mapdash">Dashboard</button>
+</mat-menu>
 <router-outlet></router-outlet>

@@ -9,6 +9,7 @@ import { Weather } from 'src/types';
 export class MapdashComponent implements OnInit {
   constructor(private WeatherAPI: WeatherAPIService) {}
   res: Weather;
+  temp: number;
   ngOnInit(): void {
     this.weatherInfo();
   }

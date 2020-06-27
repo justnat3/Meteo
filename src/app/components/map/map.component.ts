@@ -7,20 +7,14 @@ import { GeoCodeService } from 'src/app/Services/MapAPI/geo-code.service';
 })
 export class MapComponent implements OnInit {
   constructor(private MapAPI: GeoCodeService) {}
-
   ngOnInit() {
-    this.Map();
-    this.SeeUser();
+    this.load();
   }
-
-  Map() {
-    this.MapAPI.mapmap();
-  }
-
-  SeeUser() {
-    this.MapAPI.seeUser();
-  }
-  Navigation() {
-    this.MapAPI.justmapit();
+  load() {
+    setTimeout(() => {
+      this.MapAPI.Map();
+      this.MapAPI.seeUser();
+      this.MapAPI.justmapit();
+    }, 1);
   }
 }
