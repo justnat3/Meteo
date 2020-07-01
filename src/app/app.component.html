@@ -1,9 +1,17 @@
-<button mat-button [matMenuTriggerFor]="menu">
-  <img src="assets/sun.svg" height="24" width="24" translate="yes" />
-</button>
+<div class="index">
+  <button class="button" mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="map">
+      <mat-icon>dialpad</mat-icon>
+      <span>Map</span>
+    </button>
 
-<mat-menu #menu="matMenu">
-  <button mat-menu-item routerLink="map">Full Map</button>
-  <button mat-menu-item routerLink="mapdash">Dashboard</button>
-</mat-menu>
+    <button mat-menu-item routerLink="mapdash">
+      <mat-icon>dialpad</mat-icon>
+      <span>Dashboard</span>
+    </button>
+  </mat-menu>
+</div>
 <router-outlet></router-outlet>

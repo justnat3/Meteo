@@ -1,0 +1,11 @@
+<p>nav works!</p>
+<div>
+  <button mat-button [matMenuTriggerFor]="menu">
+    menu
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="map">Full Map</button>
+    <button mat-menu-item routerLink="mapdash">Dashboard</button>
+  </mat-menu>
+</div>

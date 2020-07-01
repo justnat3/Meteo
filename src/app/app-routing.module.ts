@@ -5,7 +5,7 @@ import { MapComponent } from './components/map/map.component';
 import { MapdashComponent } from './components/mapdash/mapdash.component';
 
 const routes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
+  // { path: 'dashboard', component: DashboardComponent },
   { path: 'map', component: MapComponent },
   { path: 'mapdash', component: MapdashComponent },
 ];

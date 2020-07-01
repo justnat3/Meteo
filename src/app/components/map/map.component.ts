@@ -10,11 +10,15 @@ export class MapComponent implements OnInit {
   ngOnInit() {
     this.load();
   }
+
+  click() {}
+
   load() {
     setTimeout(() => {
       this.MapAPI.Map();
       this.MapAPI.seeUser();
-      this.MapAPI.justmapit();
+      // this.MapAPI.justmapit();
+      this.MapAPI.clickPopUp();
     }, 1);
   }
 }
