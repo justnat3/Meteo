@@ -23,6 +23,9 @@ import { NavComponent } from './nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
+import { HeaderComponent } from './components/header/header.component';
+import { AuthConfigService } from 'src/Auth/auth-config.service';
+import { AuthConfigModule } from '../Auth/auth.config.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +41,7 @@ import { MatSelectModule } from '@angular/material/select';
     WheatherpictureComponent,
     LandhereComponent,
     NavComponent,
+    HeaderComponent,
   ],
 
   imports: [
@@ -53,9 +57,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatIconModule,
     MatSidenavModule,
     MatSelectModule,
+    AuthConfigModule,
   ],
 
-  providers: [],
+  providers: [AuthConfigService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

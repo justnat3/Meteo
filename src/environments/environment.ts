@@ -11,8 +11,31 @@ export const environment = {
   APIKey: {
     WeatherKey: '9ab7a8e9725f93fe5b641a6a4c794d14',
   },
-};
+  keycloak: {
+    // Url of the Identity Provider
+    issuer: 'http://127.0.0.1:8080/auth/realms/master',
 
+    // URL of the SPA to redirect the user to after login
+    redirectUri: 'http://localhost:4200/map',
+
+    // The SPA's id.
+    // The SPA is registerd with this id at the auth-serverß
+    clientId: 'Meteo-app',
+
+    responseType: 'code',
+    // set the scope for the permissions the client should request
+    // The first three are defined by OIDC.
+    scope: 'openid profile email',
+    // Remove the requirement of using Https to simplify the demo
+    // THIS SHOULD NOT BE USED IN PRODUCTION
+    // USE A CERTIFICATE FOR YOUR IDP
+    // IN PRODUCTION
+    requireHttps: false,
+    // at_hash is not present in JWT token
+    showDebugInformation: true,
+    disableAtHashCheck: true,
+  },
+};
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

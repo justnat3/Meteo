@@ -11,14 +11,15 @@ export class MapComponent implements OnInit {
     this.load();
   }
 
-  click() {}
+  // click() {}
 
   load() {
     setTimeout(() => {
       this.MapAPI.Map();
       this.MapAPI.seeUser();
+      this.MapAPI.getCoords();
       // this.MapAPI.justmapit();
-      this.MapAPI.clickPopUp();
-    }, 1);
+      // this.MapAPI.clickPopUp();
+    }, 1000);
   }
 }

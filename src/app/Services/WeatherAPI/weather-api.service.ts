@@ -16,10 +16,10 @@ export class WeatherAPIService {
 
   async getWeather(): Promise<Observable<Weather>> {
     let { lat, lng } = await this.MapAPI.getCoords();
-    let { latClick, lngClick } = await this.MapAPI.clickPopUp();
+    // let { latClick, lngClick } = await this.MapAPI.clickPopUp();
     return this.http
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latClick}&lon=${lngClick}&units=imperial&appid=${this.key}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${this.key}`
       )
       .pipe(
         map((s: Object) => {

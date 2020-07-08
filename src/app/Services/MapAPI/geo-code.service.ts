@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
-import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+// import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import { environment } from '../../../environments/environment';
-import { map, mapTo } from 'rxjs/operators';
-
+// import { map, mapTo } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
@@ -19,7 +18,7 @@ export class GeoCodeService {
   lng = -122.41;
   latClick: number;
   lonClick: number;
-  mark: any;
+  // mark: any;
 
   Map() {
     mapboxgl.accessToken = environment.mapbox.accessToken;
@@ -54,26 +53,25 @@ export class GeoCodeService {
   // LatClick: number;
   // lngCLick: number;
 
-  clickPopUp() {
-    
-    map.on('click', function (eve) {
-      map.addLayer({
-        id: 'points-of-interest',
-        source: {
-          type: 'vector',
-          url: 'mapbox://mapbox.mapbox-streets-v8'
-        },
-        'source-layer': 'poi_label',
-        type: 'circle',
-        paint: {
-          // Mapbox Style Specification paint properties
-        }
-      let latClick = eve.lngLat.lat;
-      let lngClick = eve.lngLat.lng;
+  // clickPopUp() {
+  //   this.map.on('click', function (eve) {
+  //     // map.addLayer({
+  //     //   id: 'points-of-interest',
+  //     //   source: {
+  //     //     type: 'vector',
+  //     //     url: 'mapbox://mapbox.mapbox-streets-v8'
+  //     //   },
+  //     //   'source-layer': 'poi_label',
+  //     //   type: 'circle',
+  //     //   paint: {
+  //     //     // Mapbox Style Specification paint properties
+  //     //   }
+  //     // let latClick = eve.lngLat.lat;
+  //     // let lngClick = eve.lngLat.lng;
 
-      console.log(eve);
-    });
-  }
+  //     console.log(eve);
+  //   });
+  // }
 
   // justmapit() {
   //   this.map.addControl(
