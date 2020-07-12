@@ -1,21 +1,23 @@
 <div class="index">
   <!-- <div>
     <app-header></app-header>
-  </div> -->
+  </div> -->  
   <button class="button" mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>more_vert</mat-icon>
+    <mat-icon>apps</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
     <button mat-menu-item routerLink="map">
-      <mat-icon>dialpad</mat-icon>
+      <mat-icon>map</mat-icon>
       <span>Map</span>
     </button>
-
-    <button mat-menu-item routerLink="mapdash">
-      <mat-icon>dialpad</mat-icon>
+    <button mat-menu-item routerLink="dashboard">
+      <mat-icon>view_agenda</mat-icon>
       <span>Dashboard</span>
     </button>
+    <!-- <button mat-menu-item routerLink="about">
+      <mat-icon>info</mat-icon>
+      <span>About Us</span>
+    </button> -->
   </mat-menu>
 </div>
-
 <router-outlet></router-outlet>

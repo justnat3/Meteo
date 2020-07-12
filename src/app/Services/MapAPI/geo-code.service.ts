@@ -11,9 +11,7 @@ export class GeoCodeService {
 
   // Initialize Mapbox Map
   map: mapboxgl.Map;
-  style = 'mapbox://styles/justnat3/ckbo77m9b2kai1jp91a37p0wm';
-  // style = 'mapbox://styles/mapbox/satellite-streets-v11';
-  // style = 'mapbox://styles/justnat3/ckbvih3g806ic1ipc1s56o8ml';
+  style = 'mapbox://styles/justnat3/ckbvih3g806ic1ipc1s56o8ml';
   lat = 37.75;
   lng = -122.41;
   latClick: number;

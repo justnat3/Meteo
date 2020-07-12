@@ -10,7 +10,6 @@
   border: none;
   top: 10px;
   left: 20px;
-  // top: 10px;
   position: absolute;
   z-index: 4;
   border-radius: 5px;
@@ -20,6 +19,9 @@
   overflow: hidden;
 }
 
+.big {
+  height: 100px;
+}
 .index {
   z-index: 3;
 }

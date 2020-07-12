@@ -1,11 +1,9 @@
 <div class="grid" *ngIf="res">
+  
   <app-degrees [temp]="res.temp"></app-degrees>
   <app-windspeed [windspeed]="res.windspeed"></app-windspeed>
   <app-wheatherpicture [description]="block.description"></app-wheatherpicture>
   <app-humidity [humidity]="res.humidity"></app-humidity>
   <app-townname [townName]="res.townName"></app-townname>
-  
-  <!-- <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button> -->
-
   <app-map></app-map>
 </div>

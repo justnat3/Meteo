@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AlertClientComponent } from './components/alert-client/alert-client.component';
-// import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { MapComponent } from './components/map/map.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,19 +17,17 @@ import { WindspeedComponent } from './components/windspeed/windspeed.component';
 import { HumidityComponent } from './components/humidity/humidity.component';
 import { TownnameComponent } from './components/townname/townname.component';
 import { WheatherpictureComponent } from './components/wheatherpicture/wheatherpicture.component';
-import { LandhereComponent } from './landhere/landhere.component';
-import { NavComponent } from './nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { HeaderComponent } from './components/header/header.component';
-import { AuthConfigService } from 'src/Auth/auth-config.service';
+// import { AuthConfigService } from 'src/Auth/auth-config.service';
+import { AboutpageComponent } from './components/aboutpage/aboutpage.component';
 // import { AuthConfigModule } from '../Auth/auth.config.module';
 @NgModule({
   declarations: [
     AppComponent,
     AlertClientComponent,
-    // DashboardComponent,
     MapComponent,
     ZipFormComponent,
     MapdashComponent,
@@ -39,9 +36,8 @@ import { AuthConfigService } from 'src/Auth/auth-config.service';
     HumidityComponent,
     TownnameComponent,
     WheatherpictureComponent,
-    LandhereComponent,
-    NavComponent,
     HeaderComponent,
+    AboutpageComponent,
   ],
 
   imports: [

@@ -11,8 +11,6 @@ export class MapComponent implements OnInit {
     this.load();
   }
 
-  // click() {}
-
   load() {
     setTimeout(() => {
       this.MapAPI.Map();
