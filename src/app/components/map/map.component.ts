@@ -16,10 +16,7 @@ export class MapComponent implements OnInit {
       this.MapAPI.Map();
       this.MapAPI.seeUser();
       this.MapAPI.getCoords();
-      // this.clickevent()
-      // this.MapAPI.clickevent()
-      // this.MapAPI.justmapit();
-      // this.MapAPI.clickPopUp();
+      this.MapAPI.callmebaby()
     }, 100);
   }
   async clickevent() {

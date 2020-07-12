@@ -59,8 +59,8 @@ export class GeoCodeService {
   }
 
   callmebaby(){
-    this.clickname()
-    console.log(event)
+    console.log(this.clickname())
+    console.log('test')
   }
 
   clickname() {
