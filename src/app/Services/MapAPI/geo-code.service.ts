@@ -3,6 +3,7 @@ import * as mapboxgl from 'mapbox-gl';
 // import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import { environment } from '../../../environments/environment';
 import { EventEmitter } from 'protractor';
+import { map } from 'rxjs/operators';
 // import { map, mapTo } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
@@ -56,19 +57,31 @@ export class GeoCodeService {
       });
     });
   }
-  clickevent(): Promise<{ lat: number; lng: number }> {
-    return new Promise((resolve, reject) => {
-      this.map.on('click', (event, error) => {
-        
-        let coords = {
-          lat: event.lngLat.lat,
-          lng: event.lngLat.lng
-        }
-        resolve(coords)
-        // let lng = eve.lngLat.lng
-        // let lat = eve.lngLat.lat
-        if (error) reject(error);
-      })
+
+  callmebaby(){
+    this.clickname()
+    console.log(event)
+  }
+
+  clickname() {
+    this.map.on('click', function clickCo(event){
+     return event
     })
   }
+
+  // clickevent(): Promise<{ lat: number; lng: number }> {
+  //   return new Promise((resolve, reject) => {
+  //     this.map.on('click', function (event, error) {
+        
+  //       let coords = {
+  //         lat: event.lngLat.lat,
+  //         lng: event.lngLat.lng
+  //       }
+  //       resolve(coords)
+  //       // let lng = eve.lngLat.lng
+  //       // let lat = eve.lngLat.lat
+  //       if (error) reject(error);
+  //     })
+  //   })
+  // }
 }
