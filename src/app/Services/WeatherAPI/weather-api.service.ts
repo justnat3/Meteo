@@ -10,16 +10,20 @@ import { GeoCodeService } from 'src/app/Services/MapAPI/geo-code.service';
 })
 export class WeatherAPIService {
   constructor(private http: HttpClient, private MapAPI: GeoCodeService) {}
-  lat: number = 30.5118;
-  lng: number = -0.12574;
+
   key = environment.APIKey.WeatherKey;
 
   async getWeather(): Promise<Observable<Weather>> {
-    let { lat, lng } = await this.MapAPI.getCoords();
-    // let { latClick, lngClick } = await this.MapAPI.clickPopUp();
+    let coords = {
+      lat: 51.5074,
+      lng: 0
+    }
+    // coords = await this.MapAPI.clickevent()
+    coords = await this.MapAPI.getCoords();
+    // console.log(coords)
     return this.http
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${this.key}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lng}&units=imperial&appid=${this.key}`
       )
       .pipe(
         map((s: Object) => {
@@ -35,5 +39,5 @@ export class WeatherAPIService {
         })
       );
   }
-  
+
 }
