@@ -5,5 +5,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./degrees.component.scss'],
 })
 export class DegreesComponent {
-  @Input() temp: number;
+  @Input() temp: any;
 }

@@ -29,10 +29,11 @@ export class WeatherAPIService {
             description: result.weather,
             windspeed: Math.floor(result.wind.speed),
             humidity: result.main.humidity,
-            alert: result.weather.main,
+            alert:result.weather,
             townName: result.name,
           };
         })
       );
   }
+  
 }

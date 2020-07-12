@@ -17,14 +17,14 @@ body {
 }
 
 .widget {
-  background: #0c4d6e7e;
+  background: #342742da;
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Bebas Neue";
-
+  
   p {
     margin: 0;
     color: #e3a0a0;
@@ -38,6 +38,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .widget {
+    background: #0c4d6e7e;
     border-radius: 1em;
     box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
       0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),

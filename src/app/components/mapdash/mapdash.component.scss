@@ -1,5 +1,5 @@
 .grid {
-  background: linear-gradient(#daae46, #342742da);
+  
   display: grid;
   height: 100%;
   width: 100%;
@@ -24,6 +24,7 @@
 
 @media screen and (min-width: 1200px) {
   .grid {
+    background: linear-gradient(#daae46, #342742da);
     padding: 75px;
     grid-gap: 75px;
     grid-template-columns: repeat(3, 1fr);

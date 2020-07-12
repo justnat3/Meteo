@@ -1,11 +1,25 @@
+.button:hover{
+  background: #57575721;
+}
+
+.button:focus{
+  background: #5757572f;
+  outline: none;
+}
 .button {
+  border: none;
   top: 10px;
   left: 20px;
   // top: 10px;
   position: absolute;
   z-index: 4;
   border-radius: 5px;
+  cursor: pointer;
+  background-color: Transparent;
+  
+  overflow: hidden;
 }
+
 .index {
   z-index: 3;
 }

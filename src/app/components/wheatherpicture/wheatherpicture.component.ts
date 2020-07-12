@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wheatherpicture',
   templateUrl: './wheatherpicture.component.html',
   styleUrls: ['./wheatherpicture.component.scss']
 })
-export class WheatherpictureComponent implements OnInit {
+export class WheatherpictureComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+  @Input() description: string;
 
 }

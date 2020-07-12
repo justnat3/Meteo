@@ -25,7 +25,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { HeaderComponent } from './components/header/header.component';
 import { AuthConfigService } from 'src/Auth/auth-config.service';
-import { AuthConfigModule } from '../Auth/auth.config.module';
+// import { AuthConfigModule } from '../Auth/auth.config.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,10 +57,10 @@ import { AuthConfigModule } from '../Auth/auth.config.module';
     MatIconModule,
     MatSidenavModule,
     MatSelectModule,
-    AuthConfigModule,
+    // AuthConfigModule,
   ],
 
-  providers: [AuthConfigService],
+  // providers: [AuthConfigService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

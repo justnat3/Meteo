@@ -3,7 +3,7 @@ export interface Weather {
     description: string;
     windspeed: number;
     humidity: number;
-    alert: string;
+    alert: any;
     townName: string,
 }
 

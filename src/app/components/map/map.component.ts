@@ -20,6 +20,6 @@ export class MapComponent implements OnInit {
       this.MapAPI.getCoords();
       // this.MapAPI.justmapit();
       // this.MapAPI.clickPopUp();
-    }, 1000);
+    }, .5);
   }
 }

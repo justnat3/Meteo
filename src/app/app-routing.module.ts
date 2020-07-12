@@ -6,8 +6,9 @@ import { MapdashComponent } from './components/mapdash/mapdash.component';
 
 const routes: Routes = [
   // { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '/mapdash', pathMatch: 'full' },
   { path: 'map', component: MapComponent },
-  { path: 'mapdash', component: MapdashComponent },
+  {path: 'mapdash', component: MapdashComponent}
 ];
 
 @NgModule({
