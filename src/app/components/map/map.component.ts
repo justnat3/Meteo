@@ -9,20 +9,16 @@ export class MapComponent implements OnInit {
   constructor(private MapAPI: GeoCodeService) {}
   ngOnInit() {
     this.load();
+    
   }
 
   load() {
     setTimeout(() => {
+      //this.MapAPI.clickname()
       this.MapAPI.Map();
       this.MapAPI.seeUser();
-      this.MapAPI.getCoords();
-      // this.clickevent()
-      // this.MapAPI.clickevent()
-      // this.MapAPI.justmapit();
-      // this.MapAPI.clickPopUp();
-    }, 100);
+      // 
+    }, 10);
   }
-  async clickevent() {
-    // let {lat,lng } = await this.MapAPI.clickname()
-  }
+
 }

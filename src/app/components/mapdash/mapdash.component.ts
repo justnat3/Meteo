@@ -30,6 +30,9 @@ export class MapdashComponent implements OnInit {
       if (this.block.description == 'clear sky') {
         return this.block.description = 'clear skys'
         }
+      else {
+        return this.block.description = 'No Info' 
+      }
     });
   }
   // called from Parent to make another call to the service for updated information.

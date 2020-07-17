@@ -18,9 +18,7 @@ export class WeatherAPIService {
       lat: 51.5074,
       lng: 0
     }
-    // coords = await this.MapAPI.clickevent()
     coords = await this.MapAPI.getCoords();
-    // console.log(coords)
     return this.http
       .get(
         `https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lng}&units=imperial&appid=${this.key}`

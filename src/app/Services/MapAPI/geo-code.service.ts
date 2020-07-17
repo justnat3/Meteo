@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 import * as mapboxgl from 'mapbox-gl';
 // import * as MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import { environment } from '../../../environments/environment';
-import { EventEmitter } from 'protractor';
-import { map } from 'rxjs/operators';
-// import { map, mapTo } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
@@ -16,8 +13,7 @@ export class GeoCodeService {
   style = 'mapbox://styles/justnat3/ckbvih3g806ic1ipc1s56o8ml';
   lat = 51;
   lng = 0;
-  latClick: number;
-  lonClick: number;
+
   // mark: any;
 
   Map() {
@@ -27,6 +23,11 @@ export class GeoCodeService {
       style: this.style,
       zoom: 9,
       center: [this.lng, this.lat],
+    });
+  }
+  clickname() {
+    this.map.on('click', (event) => {
+      return event;
     });
   }
 
@@ -43,36 +44,26 @@ export class GeoCodeService {
 
   getCoords(): Promise<{ lat: number; lng: number }> {
     return new Promise((resolve) => {
-      navigator.geolocation.getCurrentPosition(({ coords }) => {
-        // console.log('suck')
-        let lat = (this.lat = coords.latitude);
-        let lng = (this.lng = coords.longitude);
-        resolve({ lat, lng });
-      }, (error) => {
-        // console.log()
-        resolve({
-          lat: 51,
-          lng: 0
-        });
-      });
+      navigator.geolocation.getCurrentPosition(
+        ({ coords }) => {
+          let lat = (this.lat = coords.latitude);
+          let lng = (this.lng = coords.longitude);
+          resolve({ lat, lng });
+        },
+        (error) => {
+          resolve({
+            lat: 51,
+            lng: 0,
+          });
+        }
+      );
     });
-  }
-
-  callmebaby(){
-    this.clickname()
-    console.log(event)
-  }
-
-  clickname() {
-    this.map.on('click', function clickCo(event){
-     return event
-    })
   }
 
   // clickevent(): Promise<{ lat: number; lng: number }> {
   //   return new Promise((resolve, reject) => {
   //     this.map.on('click', function (event, error) {
-        
+
   //       let coords = {
   //         lat: event.lngLat.lat,
   //         lng: event.lngLat.lng
