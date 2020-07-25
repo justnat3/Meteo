@@ -1,8 +1,6 @@
 <p align="center"><img width=12.5% src="./src/assets/logos/logo_128.svg"></p>
 <h2 align="center">WEATHER OR NOT</h2>
 
-#
-
 [![GitHub Issues](https://img.shields.io/github/issues/justnat3/weatherornot)](https://github.com/justnat3/weatherornot/issues) ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=shields)](http://makeapullrequest.com)
 
