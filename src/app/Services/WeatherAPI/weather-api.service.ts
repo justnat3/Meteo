@@ -13,6 +13,9 @@ export class WeatherAPIService {
 
   key = environment.APIKey.WeatherKey;
 
+
+   
+
   async getWeather(): Promise<Observable<Weather>> {
     let coords = {
       lat: 51.5074,

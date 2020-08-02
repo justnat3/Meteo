@@ -23,13 +23,25 @@ export class GeoCodeService {
       style: this.style,
       zoom: 9,
       center: [this.lng, this.lat],
-    });
+    }); 
+    // setTimeout(() => {
+    //   // this.onLoad()
+    // }, 2);
   }
-  clickname() {
-    this.map.on('click', (event) => {
-      return event;
-    });
-  }
+  // click(){
+  //   this.map.on('click', (event) => {
+  //     let coords = {
+  //         lat: event.lngLat.lat,
+  //         lng: event.lngLat.lng
+  //       }
+  //       console.log(coords)
+  //   });
+  // }
+
+  // onLoad(){
+  //   this.map.on('load', this.clickevent.bind(this))
+  // }
+
 
   seeUser() {
     this.map.addControl(
@@ -60,7 +72,15 @@ export class GeoCodeService {
     });
   }
 
-  // clickevent(): Promise<{ lat: number; lng: number }> {
+// async test(){
+//   let coords = {
+//     lat: 22,
+//     lng: 22
+//   }
+//   coords = await this.clickevent()
+// }
+
+  //  clickevent(): Promise<{ lat: number; lng: number }> {
   //   return new Promise((resolve, reject) => {
   //     this.map.on('click', function (event, error) {
 
@@ -69,8 +89,6 @@ export class GeoCodeService {
   //         lng: event.lngLat.lng
   //       }
   //       resolve(coords)
-  //       // let lng = eve.lngLat.lng
-  //       // let lat = eve.lngLat.lat
   //       if (error) reject(error);
   //     })
   //   })
